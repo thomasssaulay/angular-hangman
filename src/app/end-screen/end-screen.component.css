@@ -1,0 +1,33 @@
+h2 {
+  color: #fafafa;
+  margin: 30px;
+  font-family: "Cubadak";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px #011c39;
+  font-size: 4em;
+}
+p {
+  margin-bottom: 30px;
+  font-family: "Press Start 2P";
+  color: #fafafa;
+  width: 500px;
+  text-shadow: 2px 2px #011c39;
+}
+button {
+  border: none;
+  border-radius: 0;
+  font-family: "Press Start 2P";
+  background-color: rgba(51, 94, 130, 1);
+  margin: 0 5vw;
+  padding: 2em;
+  box-shadow: 4px 2px #011c39;
+}
+button:focus,
+button:hover,
+button:active {
+  outline: none;
+}
+.row {
+  text-align: center;
+}

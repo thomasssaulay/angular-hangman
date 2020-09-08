@@ -1,0 +1,77 @@
+<!-- <h1>{{ title }}</h1> -->
+<header>
+  <nav class="navbar bg-none">
+    <a class="navbar-brand">
+      <img src="./assets/img/ubo.png" height="50" alt="" />
+    </a>
+    <h2 class="pull-right">{{ currentDomain.name }}</h2>
+  </nav>
+</header>
+
+<div class="row">
+  <h1>Quel est<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ce métier ?</h1>
+</div>
+
+<div class="row hud">
+  <div class="well" [class.shakeOnce]="shakeAnim">
+    <ul class="life-meter list-inline">
+      <li *ngFor="let life of lifeMeter">
+        <img [src]="srcLife" [ngClass]="{'desactivate' : life.desactivate}" />
+      </li>
+    </ul>
+  </div>
+  <div class="well" [class.shake]="shakeTimer">
+    <span class="timer"><b>0:{{ timerDisplay }}</b></span>
+  </div>
+</div>
+<div class="row clearfix">
+  <div class="secretWord">
+    <ul class="list-inline">
+      <li *ngFor="let letter of secretWord">
+        <span [hidden]="letter.chosen">_</span>
+        <span [hidden]="!letter.chosen" [ngClass]="{'spaced': letter.spaced}"
+          >{{letter.name}}</span
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="hint">
+  <span [hidden]="win || lost || !showHint">Indice : {{hint}}</span>
+  <span [hidden]="!win">Bravo !</span>
+  <span [hidden]="!lost">Dommage !</span>
+</div>
+
+<div class="row clearfix">
+  <div class="letters">
+    <ul class="list-inline">
+      <li *ngFor="let letter of letters">
+        <button
+          class="btn btn-primary letter-button"
+          [disabled]="letter.chosen"
+          (tap)="try(letter);"
+        >
+          {{letter.name}}
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- <button (click)="reset();" class="btn btn-primary btn-large">
+  Reset
+</button> -->
+<!-- <button (click)="revealSecret();" class="btn btn-primary btn-large">
+  Quoi ça??
+</button> -->
+<!-- <button (click)="stopTimer();" class="btn btn-primary btn-large">
+  StopTimer
+</button> -->
+<button
+  id="returnButton"
+  (click)="goToEndScreen('lost',0);"
+  class="btn btn-primary btn-large"
+>
+  Retour
+</button>

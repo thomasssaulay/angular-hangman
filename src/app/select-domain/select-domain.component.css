@@ -1,0 +1,144 @@
+.selection {
+  padding-right: 5em;
+  padding-left: 5em;
+}
+
+.selection h2 {
+  font-family: "Cubadak", "Dosis", sans-serif;
+  font-size: 7em;
+  font-style: italic;
+  transform: skewY(-10deg);
+  text-shadow: 8px 8px #011c39;
+  line-height: 0.7em;
+  text-align: left;
+  color: #fafafa;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  /* animation: smallslowpan 20s linear 0s infinite alternate; */
+}
+.selection h2 span {
+  font-size: 50%;
+  vertical-align: super;
+}
+.selection .aliens {
+  position: absolute;
+  right: 10vw;
+  top: 15vh;
+  animation: smallslowpan 20s ease 0s infinite alternate;
+}
+.selection .aliens img {
+  max-width: 280px;
+}
+.selection .fusee {
+  position: absolute;
+  top: 3em;
+  left: 12em;
+  animation: slowpan 40s linear 0s infinite alternate;
+}
+.selection .fusee img {
+  width: 360px;
+}
+.selection .astre {
+  position: absolute;
+  overflow: hidden;
+  bottom: 3em;
+  right: 0em;
+  width: 120px;
+  animation: verticalslowpan 20s ease 0s infinite alternate;
+}
+.selection .astre img {
+  width: 200px;
+}
+
+.selectufr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  width: 190px;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+.selectufr[data-id="0"] {
+  background-color: #33aadd;
+}
+.selectufr[data-id="1"] {
+  background-color: #00aa9e;
+}
+.selectufr[data-id="2"] {
+  background-color: #e95c29;
+}
+.selectufr[data-id="3"] {
+  background-color: #f6a80f;
+}
+.selectufr[data-id="4"] {
+  background-color: #7c4893;
+}
+.selectufr[data-id="5"] {
+  background-color: #d4a8bb;
+}
+.selectufr[data-id="6"] {
+  background-color: #d30450;
+}
+.selection .row .col-xs-offset-1 {
+  margin-left: 12.5%;
+}
+.selectufr p {
+  font-family: "Cubadak", "Dosis", sans-serif;
+  font-style: italic;
+  color: #fafafa;
+  font-size: 2.3em;
+  text-align: center;
+  line-height: 0.9em;
+  font-weight: 500;
+  -ms-transform: skewY(-10deg); /* IE 9 */
+  -webkit-transform: skewY(-10deg); /* Safari 3-8 */
+  transform: skewY(-10deg);
+}
+.selectufr p span {
+  font-weight: 300;
+  font-size: 65%;
+  line-height: 0.9em;
+}
+.selectufr p big {
+  font-size: 180%;
+  line-height: 0.9em;
+}
+
+@keyframes slowpan {
+  0% {
+    transform: translateX(100px) scale(1.25);
+  }
+
+  100% {
+    transform: translateX(-100px) scale(1.15);
+  }
+}
+@keyframes smallslowpan {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(40px);
+  }
+}
+@keyframes verticalslowpan {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(40px);
+  }
+}
+@keyframes diagonalslowpan {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  100% {
+    transform: translateY(40px) translateX(-20px);
+  }
+}

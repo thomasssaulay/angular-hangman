@@ -1,0 +1,15 @@
+<div class="row">
+  <h2 [hidden]="state!='lost'">Dommage !</h2>
+  <p [hidden]="state!='lost'">
+    Tu n'as pas trouvé le mot dans le temps imparti.
+  </p>
+  <h2 [hidden]="state!='win'">Bravo !</h2>
+  <p [hidden]="state!='win'">Tu as trouvé le bon métier dans les temps !</p>
+  <h2 [hidden]="state!='timeout'">Dommage !</h2>
+  <p [hidden]="state!='timeout'">
+    Trop tard... Le temps est écoulé !
+  </p>
+  <button class="btn btn-primary btn-large" (tap)="goToSelectScreen(0);">
+    Retour
+  </button>
+</div>

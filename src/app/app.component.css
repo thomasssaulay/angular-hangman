@@ -1,0 +1,41 @@
+/************************************************************************************/
+/************************************ FONT FACE *************************************/
+/************************************************************************************/
+
+@font-face {
+  font-family: "Cubadak";
+  src: url("../assets/fonts/Cubadak/Cubadak.ttf");
+}
+@font-face {
+  font-family: "Dosis";
+  font-weight: 800;
+  src: url("../assets/fonts/Dosis/Dosis-Bold.ttf");
+}
+@font-face {
+  font-family: "Dosis";
+  font-weight: 400;
+  src: url("../assets/fonts/Dosis/Dosis-Regular.ttf");
+}
+@font-face {
+  font-family: "Press Start 2P";
+  font-weight: 400;
+  src: url("../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf");
+}
+
+/************************************************************************************/
+
+body {
+  padding: 20px 40px;
+  font-family: "Dosis";
+  height: 100%;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url("../assets/img/bg.jpg");
+  background-size: cover;
+}
