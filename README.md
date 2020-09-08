@@ -1,2 +1,2 @@
 # angular-hangman
-Created with CodeSandbox
+Hangman made with Angular 8.
